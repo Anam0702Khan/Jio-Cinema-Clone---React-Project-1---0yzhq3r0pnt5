@@ -1,0 +1,174 @@
+.header {
+    margin: 0 2.5rem;
+    padding: .5rem 0;
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+    /* position: fixed;
+    top: 0; */
+}
+  
+  .slider {
+    background-color: rgb(36, 29, 29);
+    height: 100%;
+    padding-top: 10px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    z-index: 5;
+    /* Add a higher z-index value to make the slider appear above other elements */
+  }
+  
+  .text {
+    margin: 30px;
+    color: white;
+    font-size: 30px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-top: 10px;
+  }
+  
+  /* ... Other styles for slider content ... */
+  
+  /* Add this style to make sure the carousel is visible */
+  .poster {
+    z-index: 1; /* Add a lower z-index value than the slider */
+  }
+  
+.headerLeft, .headerRight {
+    display: flex;
+    align-items: center;
+
+}
+
+a > span{
+    margin: 0 30px;
+    font-size: 1.0rem;
+    cursor: pointer;
+    color: white;
+}
+
+.subscribe{
+    color: goldenrod;
+    padding: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 5px;
+    border: 2px solid goldenrod;
+    border-radius: 13px;
+}
+
+a > span:hover {
+    padding: 7px;
+    border: 2px solid white;
+    border-radius: 17px;
+}
+
+.header_icon {
+    width: 150px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.searchbar{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 19px;
+    border: 1px solid grey;
+    margin-right: 25px;
+}
+
+.user__avatar {
+    font-size: 2rem;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .slider{
+  background-color: rgb(36, 29, 29);
+  height: 100%;
+  padding-top: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  z-index: 5;
+ 
+  }
+
+  .text{
+    margin: 30px;
+    color: white;
+    font-size: 30px;
+    /* margin-left: 40px; */
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-top: 10px;
+  }
+
+  .slide {
+    margin-left: 90px;
+  }
+
+  .slider > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .logout__btn{
+    padding: 10px;
+    font-size: 35px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-left: 25px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 1111px) {
+    .menu-icon {
+      display: block;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  
+    .menu {
+      display: none;
+    }
+  
+    .menu.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+  
+    .menu.active a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+    }
+  
+    .searchbar{
+      display: none;
+    }
+  }
+  
