@@ -1,0 +1,51 @@
+.watch{
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* background-color: #fff; */
+    height: 800px;
+
+}
+
+.watchlist{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 140px;
+}
+.watchli{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    /* background-color: #fff; */
+    /* height: 700px; */
+    gap: 30px;
+    /* width: 500px; */
+}
+
+.watchli > img{
+    height: 300px;
+    width: 200px;
+    border-radius: 20px;
+    transition: transform .2s;
+
+}
+.delete__btn{
+    position: absolute;
+    background-color: rgb(78, 5, 51);
+    color: white;
+    padding: 20px;
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-bottom: -95px;
+    font-size: 17px;
+  }
+
+  @media (max-width: 480px){
+    .watchlist{
+        display: flex;
+        flex-direction: column;
+        
+    }
+  }

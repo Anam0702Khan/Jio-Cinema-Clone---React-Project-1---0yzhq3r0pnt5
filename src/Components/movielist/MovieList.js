@@ -39,7 +39,7 @@ function MovieList() {
 
   return (
     <div className='movie__list'>
-      <h2 className='list__title'>{type || "MOVIE"}</h2>
+      <h2 className='list__title'>{type.charAt(0).toUpperCase() || "MOVIE"}{type.slice(1) || "MOVIE"}</h2>
       <div className='list__cards'>
         { movieList && movieList.map(movie => (
           console.log(movie._id),

@@ -65,11 +65,11 @@ function Header() {
         </div>
       </div>
       <div className='headerRight'>
-        <input
+        {/* <input
           type='text'
           placeholder='Search'
           className={`searchbar ${nav ? 'hidden' : ''}`}
-        />
+        /> */}
         <div
           className={`avatar-container ${avatarVisible ? 'active' : ''}`}
           onClick={handleAvatarClick}

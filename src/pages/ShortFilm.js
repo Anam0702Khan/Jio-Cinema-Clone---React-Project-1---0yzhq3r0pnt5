@@ -3,7 +3,7 @@ import Cards from '../Components/Cards/Cards';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-function ShortFilm() {
+function ShortFilm(props) {
     
     const [movieList, setMovieList] = useState([]);
   
@@ -15,7 +15,7 @@ function ShortFilm() {
   
     const baseUrl = 'https://academics.newtonschool.co/api/v1/ott/show';
   
-    const apiUrl = `${baseUrl}?filter={"type": "short film"}`;
+    const apiUrl = `${baseUrl}?filter={"type": "${props.val}"}`;
   
     const getData = () => {
       fetch(apiUrl, {
@@ -54,7 +54,10 @@ function ShortFilm() {
       return (
         <>
 
-       <h1 style={{marginTop:"10px",marginBottom:"20px"}}>short film</h1>
+       <h1 style={{marginTop:"30px",marginBottom:"30px",marginLeft:"60px"}}>{props.val.charAt(0).toUpperCase()}{props.val.slice(1)}</h1>
+       <hr></hr>
+       <br></br>
+       <div style={{marginLeft:"60px", marginTop: "20px",marginBottom: "20px"}}>
         <Carousel responsive={responsive}>
         {
          movieList &&  movieList.map((movie) => {
@@ -62,8 +65,8 @@ function ShortFilm() {
           })
         }
       </Carousel> 
+      </div>
       </>
-
       )
       
 }

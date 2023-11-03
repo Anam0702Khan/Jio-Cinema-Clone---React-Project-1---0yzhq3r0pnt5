@@ -18,16 +18,16 @@
     font-size: 36px;
     color: white;
     position: absolute;
-    top: 67%;
+    top: 59%;
      left: 15%; 
-    top: 71%;
+    /* top: 71%; */
   }
   
  .movie__description {
     font-size: 27px;
     position: absolute;
     color: white;
-    top: 89%;
+    top: 84%;
     left: 5%;
     font-weight: lighter;
 
@@ -40,14 +40,26 @@
     padding: 20px;
     border: 1px solid goldenrod;
     border-radius: 10px;
-    top: 67%;
+    top: 57%;
     left: 5%;
     font-size: 17px;
+  }
+  
+  .watch__btn{
+  position: absolute;
+  background-color: rgb(78, 5, 51);
+  color: white;
+  padding: 20px;
+  border: 1px solid goldenrod;
+  border-radius: 10px;
+  top: 57%;
+  right: 5%;
+  font-size: 17px;
   }
 
   .movie__cast{
     position: absolute;
-    top: 79%;
+    top: 74%;
     right: 5%;
     font-size: 27px;
     color: white;
@@ -56,7 +68,7 @@
   .movie__type{
     margin-top: 5px;
     position: absolute;
-    top: 80%;
+    top: 74%;
     left: 5%;
     font-size: 27px;
     color: white;
@@ -68,14 +80,22 @@
        left: 15%;
        top: 50%;
     }
+     .movie__type{
+      left: 15%;
+      top: 68%;
+     }
 
     .movie__cast{
-      right: 15%;
-      top: 65%;
+      left: 15%;
+      top: 75%;
     }
     .movie__btn{
       top: 40%;
       left: 5%;
+    }
+    .watch__btn{
+      top: 40%;
+      right: 5%;
     }
   
   } 

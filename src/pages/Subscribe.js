@@ -5,16 +5,16 @@ import subscribeImage from '../subscribe.jpg';
 function Subscribe() {
   const backgroundStyle = {
     backgroundImage: `url(${subscribeImage})`,
-    backgroundSize: 'cover', // This ensures the image covers the entire component
-    backgroundRepeat: 'no-repeat', // Prevents the image from repeating
-    backgroundPosition: 'center', // Center the image horizontally and vertically
-    height: '100vh', // Set the height to cover the viewport vertically
+    backgroundSize: 'cover', 
+    backgroundRepeat: 'no-repeat', 
+    backgroundPosition: 'center', 
+    height: '100vh', 
   };
   return (
     <>
     <div className="subscribe" style={backgroundStyle}>
       <div className='subscribe-page'> 
-        <h1>JioCinema Premium</h1><br /><br /> 
+        <h1>JioCinema Premium</h1>
         <p>Welcome to the new home of all your favourite Hollywood content.The biggest,the best.Exclusively yours. </p> 
         </div>
         <br /><br /> 
@@ -27,7 +27,7 @@ function Subscribe() {
             </ul>
 
         </div>
-        <button className='subscribe-btn'>Continue and pay $999</button>
+        <button className='subscribe-btn' onClick={() => alert("You are Subscribed!!!")}>Continue and pay $999</button>
 
     </div>
     </>
