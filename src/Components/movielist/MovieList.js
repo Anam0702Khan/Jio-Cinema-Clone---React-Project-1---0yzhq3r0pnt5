@@ -48,14 +48,7 @@ function MovieList() {
           
         ))}
       </div>
-      {/* <h2 className='list__title'>{type || "MOVIE"}</h2>
-      <div className='list__cards'> */}
-    
-        {/* {movieList.map(movie => (
-          console.log(movie._id),
-          <Cards key={movie.id} movie={movie}  />
-        ))} */}
-      {/* </div> */}
+     
     </div>
   )
 }

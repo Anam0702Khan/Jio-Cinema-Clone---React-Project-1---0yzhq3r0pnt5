@@ -30,8 +30,6 @@ const Shows = () => {
       .catch(error => console.error('Error:', error));
   };
   
-
-
   useEffect(() => {
     getData()
  },[page])

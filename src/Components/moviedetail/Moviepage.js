@@ -65,8 +65,8 @@ function Moviepage() {
         <div className="movie__left">
           <img className="movie__backdrop" src={currentMovieDetail ? currentMovieDetail.thumbnail : ""} alt="" />
           <button className='watch__btn' onClick={addToWatchlist} > Add to Watchlist</button>
-
-          <button className='movie__btn' onClick={handlevideo} >Watch Now</button>
+   
+          <a className='movie__btn' href={currentMovieDetail.video_url} >Watch Now</a>
 
           <h2 className='movie__type'> Type - {currentMovieDetail ? currentMovieDetail.type : ""}</h2>
           <h1 className='movie__title'>{currentMovieDetail ? currentMovieDetail.title : ""}</h1>
@@ -86,9 +86,8 @@ function Moviepage() {
 
         {showVideo && (
 
-          <video width="320" height="240" controls>
-            <source src={currentMovieDetail.video_url} type="video/mp4" />
-          </video>
+          <a  href={currentMovieDetail.video_url}>video
+          </a>
         )}
         {
 
@@ -98,8 +97,6 @@ function Moviepage() {
         {
           console.log(showVideo)
         }
-
-
       </div>
 
     </>
