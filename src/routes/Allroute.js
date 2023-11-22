@@ -9,6 +9,7 @@ import MovieList from '../Components/movielist/MovieList';
 import Moviepage from '../Components/moviedetail/Moviepage';
 import Home from '../pages/Home';
 import WatchList from '../Components/watchlist/WatchList';
+import Video from '../pages/Video';
 
  function Allroute() {
     
@@ -23,6 +24,7 @@ return (
            <Route  path='/watchlist' element={<WatchList />}/>
            <Route path='/ott/:type' element={<MovieList />}></Route>
            <Route path='/show/:id' element={<Moviepage />}></Route>
+           <Route path='/video' element={<Video />}/>
         
            {/* <Route  component={Error }/> */}
  

@@ -8,6 +8,7 @@ import ShortFilm from "./ShortFilm";
 const Home = () => {
 
   const [popularMovies, setPopularMovies] = useState([])
+  let video_link ="https://newton-project-resume-backend.s3.amazonaws.com/video/64cffee700bad552e8dcd551.mp4";
 
   useEffect(() => {
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US")
@@ -66,13 +67,18 @@ const Home = () => {
             ))
           }
         </Carousel>
+        
         <ShortFilm val="short film" />
         <ShortFilm val="trailer" />
-        <img style={{ height: "300px", width: "100vw", objectFit: "cover" }} src='https://v3img.voot.com/resizeHigh,w_1920,h_1080/v3Storage/assets/kyy-s5-16x9-6-1693554814025.jpg' />
+        <Link to={`/video?videoid=${video_link}`}>
+        <img style={{ height: "300px", width: "100vw", objectFit: "cover" }} src='https://v3img.voot.com/resizeMedium,w_1920,h_411/v3Storage/assets/14x3-1699207453417.jpg?imformat=chrome'/>
+        </Link>
         <ShortFilm val="video song" />
         <ShortFilm val="movie" />
         <ShortFilm val="tv show" />
+        <Link to={`/video?videoid=${video_link}`}>
         <img style={{ width: "100vw", objectFit: "cover" }} src='https://v3img.voot.com/resizeMedium,w_1920,h_411/v3Storage/assets/14x3-roadies-1697379655862.jpg?imformat=chrome' />
+        </Link>
       </div>
     </>
   )
