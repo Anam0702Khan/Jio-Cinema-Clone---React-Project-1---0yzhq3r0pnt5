@@ -11,10 +11,17 @@ const Home = () => {
   let video_link ="https://newton-project-resume-backend.s3.amazonaws.com/video/64cffee700bad552e8dcd551.mp4";
 
   useEffect(() => {
-    fetch("https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US")
-      .then(res => res.json())
-      .then(data => setPopularMovies(data.results))
-  }, [])
+    fetch("https://imdb-top-100-movies.p.rapidapi.com/", {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "f8565ecdffmsh2de3436aecfe5d9p15859ajsnfea25615dfc7",
+        "x-rapidapi-host": "imdb-top-100-movies.p.rapidapi.com",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setPopularMovies(data));
+  }, []);
+
 
   const [apidata, setApidata] = useState([])
   const accesstoken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJpc3QiOiIiLCJpYXQiOjE2OTMzODQ1NjYsImV4cCI6MTY5MzM4NDU5NiwianRpIjoiand0X25vbmNlIn0.Qri9Ejnj1I5CMWRBtiU_U4X4yTfhXWWp_SG-pLT-aJI'
@@ -44,28 +51,29 @@ const Home = () => {
           infiniteLoop={true}
           showStatus={false}
         >
-          {
-            popularMovies.map(movie => (
+          {popularMovies &&
+            popularMovies.map((movie) => (
               <>
-
                 <div className="posterImage">
-                  <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} />
+                <img src={movie.image} alt={movie.title} />
                 </div>
                 <div className="posterImage__overlay">
-                  <div className="posterImage__title">{movie ? movie.original_title : ""}</div>
+                  <div className="posterImage__title">
+                    {movie ? movie.title : ""}
+                  </div>
                   <div className="posterImage__runtime">
-                    {movie ? movie.release_date : ""}
+                    {movie ? movie.year : ""}
                     <span className="posterImage__rating">
-                      {movie ? movie.vote_average : ""}
+                      {movie ? movie.rating : ""}
                       <i className="fas fa-star" />{" "}
                     </span>
                   </div>
-                  <div className="posterImage__description">{movie ? movie.overview : ""}</div>
+                  <div className="posterImage__description">
+                    {movie ? movie.description : ""}
+                  </div>
                 </div>
               </>
-
-            ))
-          }
+            ))}
         </Carousel>
         
         <ShortFilm val="short film" />

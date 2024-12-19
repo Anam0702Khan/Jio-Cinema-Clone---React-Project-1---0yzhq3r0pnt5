@@ -92,10 +92,12 @@
     .movie__btn{
       top: 40%;
       left: 5%;
+      cursor: pointer;
     }
     .watch__btn{
       top: 40%;
       right: 5%;
+      cursor: pointer;
     }
   
   } 
