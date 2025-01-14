@@ -19,7 +19,7 @@ const Home = () => {
       },
     })
       .then((res) => res.json())
-      .then((data) => setPopularMovies(data));
+      .then((data) => setPopularMovies(data.movies || []));
   }, []);
 
 
