@@ -51,7 +51,7 @@ const Home = () => {
           infiniteLoop={true}
           showStatus={false}
         >
-          {popularMovies &&
+          {Array.isArray(popularMovies) &&
             popularMovies.map((movie) => (
               <>
                 <div className="posterImage">
